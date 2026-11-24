@@ -1,0 +1,56 @@
+# Segreti e configurazione locale
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+
+# Ambienti virtuali
+venv/
+venv*/
+.venv/
+env/
+
+# Cache e build Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Dati personali generati a runtime (chat, memoria, promemoria)
+data/*
+!data/.gitkeep
+
+# Audio, video e registrazioni
+*.wav
+*.mp3
+*.ogg
+*.flac
+*.m4a
+*.webm
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Modelli e file pesanti
+*.bin
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.gguf
+*.zip
+*.7z
+*.rar
+
+# Editor / sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

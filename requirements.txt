@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-multipart
+ollama
+httpx
+psutil
+ddgs
+pypdf
+python-docx
+numpy
+soundfile
+faster-whisper
+kokoro
+torch

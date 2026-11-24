@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Jarvis</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div id="boot-screen">
+
+    <div class="boot-title">
+        J.A.R.V.I.S
+    </div>
+
+    <div id="boot-log">
+
+    </div>
+
+</div>
+
+    <div class="left-panel">
+
+        <div class="card">
+            <h3>CPU</h3>
+            <p id="cpu-val">-- %</p>
+        </div>
+
+        <div class="card">
+            <h3>RAM</h3>
+            <p id="ram-val">-- %</p>
+        </div>
+
+        <div class="card">
+            <h3>WEATHER</h3>
+            <p id="meteo-val">—</p>
+        </div>
+
+                <div class="card">
+            <h3>ORA</h3>
+            <p id="ora-val">--:--</p>
+        </div>
+
+                <div class="card">
+            <h3>MEMORIA</h3>
+            <p id="mem-val">-- ricordi</p>
+        </div>
+
+    </div>
+
+    <div class="center-panel">
+
+        <div class="jarvis-core">
+
+            <div class="ring ring1"></div>
+            <div class="ring ring2"></div>
+            <div class="ring ring3"></div>
+
+            <div class="core-text" id="jarvis-status">
+                ONLINE
+            </div>
+
+            <button id="mic-btn">
+                🎤
+            </button>
+
+            <button id="wake-btn" type="button" onclick="toggleWake()">👂 Wake word: OFF</button>
+
+            <button id="stop-btn" type="button" onclick="fermaVoce()">⏹</button>
+            
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <div class="chat-header">
+            <button id="menu-btn" type="button" onclick="toggleLista()">☰</button>
+            <div class="chat-title" id="chat-titolo">Conversazione</div>
+            <button id="new-btn" type="button" onclick="nuovaChat()">+ Nuova</button>
+        </div>
+
+        <div id="chat-list" style="display:none"></div>
+
+        <div id="chat"></div>
+
+        <div id="doc-chip" style="display:none"></div>
+
+        <div class="bottom">
+
+            <button id="attach-btn" type="button" onclick="document.getElementById('file-input').click()">📎</button>
+            <input id="file-input" type="file" accept=".pdf,.docx,.txt,.md" style="display:none" onchange="caricaDocumento(this)">
+
+            <input
+                id="msg"
+                type="text"
+                placeholder="Scrivi un messaggio..."
+            >
+
+            <button onclick="invia()">
+                Invia
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
